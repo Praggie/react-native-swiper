@@ -3,10 +3,12 @@
  * @author leecade<leecade@163.com>
  */
 import React from 'react'
+import PropTypes from 'prop-types'
 import ReactNative, {
   StyleSheet,
   Text,
   View,
+  ViewPropTypes,
   ScrollView,
   Dimensions,
   TouchableOpacity,
@@ -106,25 +108,25 @@ module.exports = React.createClass({
    * @type {Object}
    */
   propTypes: {
-    horizontal                       : React.PropTypes.bool,
-    children                         : React.PropTypes.node.isRequired,
-    style                            : View.propTypes.style,
-    pagingEnabled                    : React.PropTypes.bool,
-    showsHorizontalScrollIndicator   : React.PropTypes.bool,
-    showsVerticalScrollIndicator     : React.PropTypes.bool,
-    bounces                          : React.PropTypes.bool,
-    scrollsToTop                     : React.PropTypes.bool,
-    removeClippedSubviews            : React.PropTypes.bool,
-    automaticallyAdjustContentInsets : React.PropTypes.bool,
-    showsPagination                  : React.PropTypes.bool,
-    showsButtons                     : React.PropTypes.bool,
-    loop                             : React.PropTypes.bool,
-    autoplay                         : React.PropTypes.bool,
-    autoplayTimeout                  : React.PropTypes.number,
-    autoplayDirection                : React.PropTypes.bool,
-    index                            : React.PropTypes.number,
-    renderPagination                 : React.PropTypes.func,
-    onScroll                         : React.PropTypes.func,
+    horizontal                       : PropTypes.bool,
+    children                         : PropTypes.node.isRequired,
+    style                            : ViewPropTypes.style,
+    pagingEnabled                    : PropTypes.bool,
+    showsHorizontalScrollIndicator   : PropTypes.bool,
+    showsVerticalScrollIndicator     : PropTypes.bool,
+    bounces                          : PropTypes.bool,
+    scrollsToTop                     : PropTypes.bool,
+    removeClippedSubviews            : PropTypes.bool,
+    automaticallyAdjustContentInsets : PropTypes.bool,
+    showsPagination                  : PropTypes.bool,
+    showsButtons                     : PropTypes.bool,
+    loop                             : PropTypes.bool,
+    autoplay                         : PropTypes.bool,
+    autoplayTimeout                  : PropTypes.number,
+    autoplayDirection                : PropTypes.bool,
+    index                            : PropTypes.number,
+    renderPagination                 : PropTypes.func,
+    onScroll                         : PropTypes.func,
   },
 
   mixins: [TimerMixin],
